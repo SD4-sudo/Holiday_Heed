@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-headline: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+
+  --color-primary: #0061a4;
+  --color-primary-container: #2196f3;
+  --color-primary-fixed-dim: #9ecaff;
+  --color-cyan-vibrant: #00bcd4;
+  --color-surface: #f8f9ff;
+  --color-on-surface: #181c22;
+  --color-on-surface-variant: #404752;
+  --color-surface-container-low: #f1f3fc;
+
+  --animate-scroll-x: scroll-x 35s linear infinite;
+  --animate-wave: wave 2.5s infinite;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0, 97, 164, 0.4), rgba(24, 28, 34, 0.7));
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Vertical Scrollbar for Package Cards */
+  .custom-scrollbar::-webkit-scrollbar { width: 3px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+  /* Horizontal Scrollbar for Package Cards */
+  .custom-scrollbar-x::-webkit-scrollbar { height: 5px; }
+  .custom-scrollbar-x::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+  .custom-scrollbar-x::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  .custom-scrollbar-x::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+}
