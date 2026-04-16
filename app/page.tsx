@@ -13,6 +13,7 @@ import PopularPlaces from '@/components/PopularPlaces';
 import Footer from '@/components/Footer';
 import CallButton from '@/components/CallButton';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <ContactSection />
+      <Analytics />
       <PopularPlaces />
       <Footer />
       <CallButton />
