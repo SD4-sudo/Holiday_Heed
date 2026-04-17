@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-10 bg-surface-container-lowest overflow-hidden scroll-mt-24">
+    <section id="contact" className="py-10 bg-white overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-8">
@@ -22,7 +22,7 @@ export default function ContactSection() {
           </h2>
         </div>
 
-        <div className="bg-white rounded-[1.5rem] lg:rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row border border-on-surface-variant/5 max-w-6xl mx-auto">
+        <div className="bg-white rounded-[1.5rem] lg:rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] shadow-xl overflow-hidden flex flex-col lg:flex-row border border-on-surface-variant/5 max-w-6xl mx-auto">
           {/* Left Side: Contact Info */}
           <div className="lg:w-[35%] bg-gradient-to-br from-primary via-primary/90 to-primary-container p-6 lg:p-8 text-white">
             <div className="h-full flex flex-col justify-center">

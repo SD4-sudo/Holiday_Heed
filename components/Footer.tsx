@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -12,14 +13,21 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex flex-col items-start">
               <div className="w-20 h-14 bg-white rounded-xl flex items-center justify-center mb-2 shadow-sm border border-on-surface-variant/5">
-                <span className="text-primary font-black text-xl">HH</span>
+                <Image
+                  src="/logo/favicon.ico"
+                  alt="Holiday Heed Kashmir | Home"
+                  width={200}
+                  height={200}
+                  className="h-auto w-auto max-w-[220px] md:max-w-[220px]"
+                  priority
+                />
               </div>
-              <p className="text-[10px] font-black text-on-surface uppercase tracking-widest">Holiday Heed</p>
-              <p className="text-[8px] text-on-surface-variant/60 italic font-medium">Kashmir & Ladakh Tours</p>
+              <p className="text-[10px] font-black text-on-surface uppercase tracking-widest">Holiday Heed Kashmir</p>
+              <p className="text-[8px] text-on-surface-variant/60 italic font-medium">Kashmir Tours</p>
             </div>
 
             <p className="text-sm font-medium text-on-surface-variant leading-relaxed">
-              Plan Kashmir & Ladakh Tours with Holiday Heed Kashmir. Get upto 30% OFF on all Tour Packages. We specialize in crafting personalized travel experiences that create lasting memories.
+              Plan Kashmir Tours with Holiday Heed Kashmir. Get upto 30% OFF on all Tour Packages. We specialize in crafting personalized travel experiences that create lasting memories.
             </p>
           </div>
 
@@ -36,7 +44,7 @@ export default function Footer() {
                 { name: 'Home', href: '/' },
                 { name: 'About Us', href: '/about' },
                 { name: 'Packages', href: '/packages' },
-                { name: 'Contact Us', href: '#' }
+                { name: 'Contact Us', href: '#contact' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm font-bold text-on-surface-variant/70 hover:text-primary transition-all flex items-center gap-2 group">

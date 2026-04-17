@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <PopularPackages />
       <TrendingDestinations />
-      <CategoryPackages />
+      {/* <CategoryPackages /> */}
       {/* <TrendingEscapes /> */}
       <SeasonGuide />
       <WhyChooseUs />

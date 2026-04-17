@@ -9,9 +9,10 @@ import { Menu, X } from 'lucide-react';
 import BookingDialog from './BookingDialog';
 
 const NAV_ITEMS = [
+  { name: 'Home', href: '/#hero', id: 'hero' },
   { name: 'Packages', href: '/packages' },
   { name: 'Destinations', href: '/#destinations', id: 'destinations' },
-  { name: 'Category', href: '/#category', id: 'category' },
+  // { name: 'Category', href: '/#category', id: 'category' },
   { name: 'Testimonials', href: '/#testimonials', id: 'testimonials' },
   { name: 'Contact', href: '/#contact', id: 'contact' },
   { name: 'About', href: '/about' },
@@ -48,7 +49,7 @@ export default function Header() {
 
     // Only observe if on home page
     if (pathname === '/') {
-      const sections = ['destinations', 'category', 'testimonials', 'contact'];
+      const sections = ['hero', 'destinations', 'category', 'testimonials', 'contact'];
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (el) observer.observe(el);
@@ -69,21 +70,20 @@ export default function Header() {
     return pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
   };
 
-  const shouldShowSolid = isScrolled || isMenuOpen || pathname !== '/';
-
   return (
     <>
-      <nav className={`fixed top-0 w-full z-[60] transition-all duration-300 ${shouldShowSolid ? 'bg-white shadow-sm py-3' : 'bg-transparent py-6'}`}>
+      <nav className={`fixed top-0 w-full z-[60] transition-all duration-300 bg-white ${isScrolled ? 'shadow-sm py-3' : 'py-6'}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 w-full">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo/logo-dark.png"
+              src="/logo/favicon.ico"
               alt="Holiday Heed Kashmir"
-              width={150}
-              height={50}
-              className="h-auto w-auto max-w-[120px] md:max-w-[150px]"
+              width={200}
+              height={200}
+              className="h-auto w-auto max-w-[220px] md:max-w-[220px]"
               priority
             />
+            <span className="ml-2 text-primary font-black text-xl">Holiday Heed Kashmir</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -94,12 +94,9 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative font-medium text-sm tracking-tight transition-all duration-300 py-1 ${active
-                      ? 'text-primary'
-                      : shouldShowSolid
-                        ? 'text-on-surface-variant hover:text-primary'
-                        : 'text-white/80 hover:text-white'
-                    }`}
+                  className={`relative font-medium text-sm tracking-tight transition-all duration-300 py-1 ${
+                    active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                  }`}
                 >
                   {item.name}
                   {active && (
@@ -115,12 +112,15 @@ export default function Header() {
           </div>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            <button onClick={() => setIsBookingOpen(true)} className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm tracking-tight transition-all duration-300 shadow-md active:scale-95 whitespace-nowrap cursor-pointer ${shouldShowSolid ? 'bg-primary text-white hover:bg-primary/90' : 'bg-white text-primary hover:bg-white/90'}`}>
+            <button 
+              onClick={() => setIsBookingOpen(true)} 
+              className="px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm tracking-tight transition-all duration-300 shadow-md active:scale-95 whitespace-nowrap cursor-pointer bg-primary text-white hover:bg-primary/90"
+            >
               Book Now
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 md:hidden transition-colors duration-300 ${shouldShowSolid ? 'text-on-surface' : 'text-white'}`}
+              className="p-2 md:hidden transition-colors duration-300 text-on-surface"
             >
               {isMenuOpen ? <X /> : <Menu />}
             </button>
@@ -157,8 +157,9 @@ export default function Header() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-base font-black tracking-tight flex items-center gap-3 transition-colors ${active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
-                        }`}
+                      className={`text-base font-black tracking-tight flex items-center gap-3 transition-colors ${
+                        active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                      }`}
                     >
                       {active && <motion.div layoutId="mobileActive" className="w-1.5 h-1.5 rounded-full bg-primary" />}
                       {item.name}
@@ -181,5 +182,3 @@ export default function Header() {
     </>
   );
 }
-
-

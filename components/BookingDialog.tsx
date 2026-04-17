@@ -24,9 +24,18 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
     travelers: '',
     message: ''
   });
+
+  // State for field-specific validation errors
+  const [errors, setErrors] = useState({
+    fullName: '',
+    mobile: '',
+    email: '',
+    travelers: ''
+  });
+
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [globalError, setGlobalError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -34,11 +43,59 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
       ...prev,
       [name]: value
     }));
+    // Clear the specific error when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { fullName: '', mobile: '', email: '', travelers: '' };
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = 'Full Name is required';
+      isValid = false;
+    }
+
+    if (!formData.mobile) {
+      newErrors.mobile = 'Mobile No. is required';
+      isValid = false;
+    } else if (formData.mobile.length < 10) {
+      newErrors.mobile = 'Enter a valid 10-digit number';
+      isValid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email) {
+      newErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Enter a valid email address';
+      isValid = false;
+    }
+
+    if (!formData.travelers) {
+      newErrors.travelers = 'Required';
+      isValid = false;
+    } else if (parseInt(formData.travelers) < 1) {
+      newErrors.travelers = 'Must be at least 1';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setGlobalError('');
+    
+    // Run React validation before submitting
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -66,10 +123,10 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
           onClose();
         }, 2000);
       } else {
-        setError(data.message || 'Failed to send email. Please try again.');
+        setGlobalError(data.message || 'Failed to send email. Please try again.');
       }
     } catch (error: any) {
-      setError(error.message || 'Network error. Please check your connection.');
+      setGlobalError(error.message || 'Network error. Please check your connection.');
       console.error('Error submitting form:', error);
     } finally {
       setLoading(false);
@@ -109,13 +166,13 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                 <span className="text-xs sm:text-lg font-black text-on-surface text-center">Enquire Now To Get Best Price.</span>
               </div>
 
-              {error && (
+              {globalError && (
                 <div className="mb-4 p-3 bg-red-100 border border-red-300 rounded-lg text-red-700 text-sm font-bold text-center">
-                  {error}
+                  {globalError}
                 </div>
               )}
 
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="space-y-4" onSubmit={handleSubmit} noValidate>
                 <div>
                   <label className="block text-xs font-black text-on-surface mb-2 ml-1">
                     Full Name<span className="text-red-500">*</span>:
@@ -125,10 +182,14 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium text-sm"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all font-medium text-sm ${
+                      errors.fullName 
+                        ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/10' 
+                        : 'border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10'
+                    }`}
                     placeholder="Enter your name"
-                    required
                   />
+                  {errors.fullName && <p className="text-red-500 text-[10px] font-bold mt-1.5">{errors.fullName}</p>}
                 </div>
 
                 <div>
@@ -142,12 +203,17 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                     onChange={(e) => {
                       const value = e.target.value.replace(/\D/g, '').slice(0, 10);
                       setFormData(prev => ({ ...prev, mobile: value }));
+                      if (errors.mobile) setErrors(prev => ({ ...prev, mobile: '' }));
                     }}
                     maxLength={10}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium text-sm"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all font-medium text-sm ${
+                      errors.mobile 
+                        ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/10' 
+                        : 'border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10'
+                    }`}
                     placeholder="Enter mobile number (10 digits)"
-                    required
                   />
+                  {errors.mobile && <p className="text-red-500 text-[10px] font-bold mt-1.5">{errors.mobile}</p>}
                 </div>
 
                 <div>
@@ -159,10 +225,14 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium text-sm"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all font-medium text-sm ${
+                      errors.email 
+                        ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/10' 
+                        : 'border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10'
+                    }`}
                     placeholder="Enter email address"
-                    required
                   />
+                  {errors.email && <p className="text-red-500 text-[10px] font-bold mt-1.5">{errors.email}</p>}
                 </div>
 
                 <div>
@@ -174,11 +244,14 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                     name="travelers"
                     value={formData.travelers}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all font-medium text-sm"
+                    className={`w-full px-4 py-3 rounded-xl border outline-none transition-all font-medium text-sm ${
+                      errors.travelers 
+                        ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/10' 
+                        : 'border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/10'
+                    }`}
                     placeholder="Number of people"
-                    min="1"
-                    required
                   />
+                  {errors.travelers && <p className="text-red-500 text-[10px] font-bold mt-1.5">{errors.travelers}</p>}
                 </div>
 
                 <div>

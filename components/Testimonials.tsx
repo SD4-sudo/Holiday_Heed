@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Star } from 'lucide-react';
+import Image from 'next/image';
 
 const REVIEWS = [
   {
@@ -321,7 +322,14 @@ export default function Testimonials() {
             <div className="flex flex-col items-center relative z-10">
               <div className="mb-6 flex flex-col items-center">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-2 shadow-sm border border-on-surface-variant/5">
-                  <span className="text-primary font-black text-xl">HH</span>
+                   <Image
+                      src="/logo/favicon.ico"
+                      alt="Holiday Heed Kashmir"
+                      width={200}
+                      height={200}
+                      className="h-auto w-auto max-w-[220px] md:max-w-[220px]"
+                      priority
+                    />
                 </div>
                 <p className="text-[10px] font-black text-on-surface uppercase tracking-widest">Holiday Heed Kashmir</p>
               </div>
