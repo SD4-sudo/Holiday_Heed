@@ -13,7 +13,7 @@ export default function AboutPage() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   
   return (
-    <main className="min-h-screen bg-surface">
+    <main className="min-h-screen bg-surface pt-15">
       <Navbar />
 
       {/* Hero Section - Matching common pattern */}
@@ -27,7 +27,7 @@ export default function AboutPage() {
               </span>
               <div className="h-px w-8 lg:w-12 bg-primary/30" />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-serif text-on-surface tracking-tight">
+            <h1 className="text-3xl lg:text-7xl font-serif text-on-surface tracking-tight">
               About <span className="text-primary italic">Holiday Heed Kashmir</span>
             </h1>
             <p className="mt-6 text-on-surface-variant text-[13px] md:text-sm font-medium max-w-2xl">

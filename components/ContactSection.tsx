@@ -37,7 +37,6 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-black text-xs lg:text-sm uppercase tracking-wider mb-1">Office Address</h4>
                     <p className="text-white/80 text-[11px] lg:text-xs leading-relaxed max-w-[200px]">
-                      Office No. 113,114, Khazir Complex, Munawar Link Road, Munawara Abad, Srinagar, Jammu & Kashmir India - 190001
                     </p>
                   </div>
                 </div>

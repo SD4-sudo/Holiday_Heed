@@ -14,10 +14,10 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <div className="w-20 h-14 bg-white rounded-xl flex items-center justify-center mb-2 shadow-sm border border-on-surface-variant/5">
                 <Image
-                  src="/logo/favicon.ico"
+                  src="/logo/image.png"
                   alt="Holiday Heed Kashmir | Home"
-                  width={200}
-                  height={200}
+                  width={48}
+                  height={48}
                   className="h-auto w-auto max-w-[220px] md:max-w-[220px]"
                   priority
                 />
@@ -106,7 +106,7 @@ export default function Footer() {
                 },
                 { 
                   label: 'Visit Us', 
-                  value: 'Office No. 113,114, Khazir Complex, Munawar Link Road, Munawara Abad, Srinagar, Jammu & Kashmir India - 190001',
+                  value: '2nd Floor, Sheikh Complex, Post Office Lane, near Post Office, Rajbagh, Srinagar, Jammu and Kashmir 190008',
                   href: null
                 }
               ].map((item, i) => (

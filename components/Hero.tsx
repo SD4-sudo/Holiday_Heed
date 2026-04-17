@@ -50,10 +50,10 @@ export default function Hero() {
             className="space-y-4"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white leading-[1.1] tracking-tight drop-shadow-2xl">
-              Top <span className="text-blue-400 italic">Kashmir</span> Tour Package<br />
-              Reserve Your <span className="text-blue-400 italic">Perfect Trip</span><br />
+              Top <span className="text-green">Kashmir</span> Tour Package<br />
+              Reserve Your <span className="text-green">Perfect Trip</span><br />
               <span className="text-lg sm:text-xl md:text-2xl font-sans font-medium tracking-normal text-white/90">
-                4N/5D Starting <span className="text-blue-400 italic">₹12,500</span> only
+                4N/5D Starting <span className="text-green">₹12,500</span> only
               </span>
             </h1>
 

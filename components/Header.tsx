@@ -76,14 +76,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 w-full">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo/favicon.ico"
+              src="/logo/image.png"
               alt="Holiday Heed Kashmir"
-              width={200}
-              height={200}
+              width={48}
+              height={48}
               className="h-auto w-auto max-w-[220px] md:max-w-[220px]"
               priority
             />
-            <span className="ml-2 text-primary font-black text-xl">Holiday Heed Kashmir</span>
+            <span className="ml-2 text-primary font-black text-l md:text-xl">Holiday Heed Kashmir</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -114,7 +114,7 @@ export default function Header() {
           <div className="flex items-center space-x-2 md:space-x-4">
             <button 
               onClick={() => setIsBookingOpen(true)} 
-              className="px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm tracking-tight transition-all duration-300 shadow-md active:scale-95 whitespace-nowrap cursor-pointer bg-primary text-white hover:bg-primary/90"
+              className="hidden md:block px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm tracking-tight transition-all duration-300 shadow-md active:scale-95 whitespace-nowrap cursor-pointer bg-primary text-white hover:bg-primary/90"
             >
               Book Now
             </button>
@@ -138,18 +138,18 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMenuOpen(false)}
-              className="fixed inset-0 z-[50] bg-black/20 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-[65] bg-black/5 md:hidden"
             />
 
-            {/* Sidebar */}
+            {/* Navbar Menu */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[280px] z-[55] bg-white pt-24 px-8 md:hidden shadow-2xl"
+              className="fixed top-20 left-0 right-0 w-full z-[70] bg-white shadow-md md:hidden"
             >
-              <div className="flex flex-col space-y-7">
+              <div className="max-w-7xl mx-auto flex flex-col px-4 py-6 space-y-4">
                 {NAV_ITEMS.map((item) => {
                   const active = isActive(item);
                   return (
@@ -157,21 +157,14 @@ export default function Header() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-base font-black tracking-tight flex items-center gap-3 transition-colors ${
+                      className={`text-sm font-semibold tracking-tight transition-colors ${
                         active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
                       }`}
                     >
-                      {active && <motion.div layoutId="mobileActive" className="w-1.5 h-1.5 rounded-full bg-primary" />}
                       {item.name}
                     </Link>
                   );
                 })}
-              </div>
-
-              {/* Bottom Info in Sidebar */}
-              <div className="absolute bottom-10 left-8 right-8">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/40 mb-2">Support</p>
-                <p className="text-sm font-bold text-on-surface">bookings@holidayheadkashmir.in</p>
               </div>
             </motion.div>
           </>

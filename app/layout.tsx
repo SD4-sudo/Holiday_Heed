@@ -18,8 +18,11 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'High-Altitude Curator | Premium Travel Experiences',
+  title: 'Holiday Heed Kashmir',
   description: 'Discover the world\'s most breathtaking destinations through our curated high-altitude perspective.',
+  icons: {
+    icon: '/logo/image.png',
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
