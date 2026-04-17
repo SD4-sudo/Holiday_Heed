@@ -9,37 +9,32 @@ export const DESTINATIONS = [
   {
     id: 1,
     name: "Srinagar",
-    image: "https://picsum.photos/seed/srinagar/800/600",
+    image: "https://images.unsplash.com/photo-1566837497312-7be7830ae9b1?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
     name: "Gulmarg",
-    image: "https://picsum.photos/seed/gulmarg/800/600",
+    image: "https://images.unsplash.com/photo-1631693558359-f7afa9e8e883?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
     name: "Pahalgam",
-    image: "https://picsum.photos/seed/pahalgam/800/600",
+    image: "https://images.unsplash.com/photo-1668173443752-bdec2fbb3c79?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
     name: "Sonamarg",
-    image: "https://picsum.photos/seed/sonamarg/800/600",
+    image: "https://images.unsplash.com/photo-1561287437-c69a30664793?q=80&w=1158&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
     name: "Yusmarg",
-    image: "https://picsum.photos/seed/yusmarg/800/600",
+    image: "https://images.unsplash.com/photo-1653547194257-6810a860b882?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 6,
     name: "Gurez Valley",
-    image: "https://picsum.photos/seed/gurez/800/600",
-  },
-  {
-    id: 7,
-    name: "Ladakh",
-    image: "https://picsum.photos/seed/ladakh/800/600",
+    image: "https://images.unsplash.com/photo-1708186320869-0a527e67023d?q=80&w=690&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ];
 
@@ -48,21 +43,21 @@ export const CATEGORIES = [
     id: 1,
     name: "Honeymoon Specials",
     price: "₹24,999",
-    image: "https://picsum.photos/seed/honeymoon/800/600",
+    image: "https://plus.unsplash.com/premium_photo-1661328087840-4cdb358cff44?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Romantic getaways designed for newlyweds in the heart of the valley.",
   },
   {
     id: 2,
     name: "Family Packages",
     price: "₹18,500",
-    image: "https://picsum.photos/seed/family/800/600",
+    image: "https://images.unsplash.com/photo-1559054109-82d938dac629?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Fun-filled vacations for all ages with comfortable stays and activities.",
   },
   {
     id: 3,
     name: "Adventure Tours",
     price: "₹15,000",
-    image: "https://picsum.photos/seed/adventure/800/600",
+    image: "https://i.pinimg.com/1200x/c4/64/fd/c464fd273e2c096c310751ef1065c264.jpg",
     description: "Trekking, skiing, and rafting for those who seek the thrill of the wild.",
   },
   {
@@ -99,7 +94,7 @@ export const PACKAGES = [
   {
     id: 1,
     title: "Kashmir Honeymoon Special",
-    image: "https://picsum.photos/seed/kashmir1/800/600",
+    image: "https://plus.unsplash.com/premium_photo-1661328087840-4cdb358cff44?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "5 Nights / 6 Days",
     location: "Srinagar - Gulmarg - Pahalgam",
     price: "₹24,999",
@@ -123,7 +118,7 @@ export const PACKAGES = [
   {
     id: 2,
     title: "Family Adventure in Gulmarg",
-    image: "https://picsum.photos/seed/kashmir2/800/600",
+    image: "https://plus.unsplash.com/premium_photo-1681909931907-7beaaed6a930?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "4 Nights / 5 Days",
     location: "Gulmarg - Sonamarg",
     price: "₹18,500",
@@ -146,7 +141,7 @@ export const PACKAGES = [
   {
     id: 3,
     title: "Srinagar & Dal Lake Escape",
-    image: "https://picsum.photos/seed/kashmir3/800/600",
+    image: "https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3 Nights / 4 Days",
     location: "Dal Lake - Mughal Gardens",
     price: "₹12,999",
@@ -168,7 +163,7 @@ export const PACKAGES = [
   {
     id: 4,
     title: "Complete Kashmir Tour",
-    image: "https://picsum.photos/seed/kashmir4/800/600",
+    image: "https://images.unsplash.com/photo-1680223198255-79547edecc9e?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "7 Nights / 8 Days",
     location: "Srinagar - Gulmarg - Pahalgam - Sonamarg",
     price: "₹32,500",
@@ -194,7 +189,7 @@ export const PACKAGES = [
   {
     id: 5,
     title: "Winter Special Gulmarg",
-    image: "https://picsum.photos/seed/kashmir5/800/600",
+    image: "https://images.unsplash.com/photo-1651509094074-e8acaeb84d8f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "4 Nights / 5 Days",
     location: "Gulmarg Skiing Resort",
     price: "₹21,000",
@@ -215,33 +210,9 @@ export const PACKAGES = [
     exclusions: ["Gondola Tickets", "Advanced Skiing Lessons", "Lunch"]
   },
   {
-    id: 6,
-    title: "Leh Ladakh Adventure",
-    image: "https://picsum.photos/seed/kashmir6/800/600",
-    duration: "6 Nights / 7 Days",
-    location: "Leh - Nubra Valley - Pangong",
-    price: "₹28,500",
-    originalPrice: "₹52,000",
-    discount: "30% OFF",
-    rating: 4.9,
-    destination: "Ladakh",
-    category: "Adventure Tours",
-    description: "A journey to the 'Land of High Passes'. Experience the unique culture and stunning landscapes of Ladakh, including the high-altitude Pangong Lake and the sand dunes of Nubra Valley.",
-    itinerary: [
-      { day: 1, title: "Arrival in Leh", details: "Rest and acclimatize to the high altitude." },
-      { day: 2, title: "Leh Local", details: "Visit Leh Palace, Shanti Stupa, and Hall of Fame." },
-      { day: 3, title: "Leh to Nubra Valley", details: "Drive via Khardung La, the highest motorable road." },
-      { day: 4, title: "Nubra to Pangong", details: "Drive to the stunning Pangong Tso via Shyok river." },
-      { day: 5, title: "Pangong to Leh", details: "Return to Leh via Chang La pass." },
-      { day: 6, title: "Leh Departure", details: "Transfer to Leh Airport." }
-    ],
-    inclusions: ["Inner Line Permits", "Accommodation", "Breakfast & Dinner", "Oxygen Cylinders in Vehicle"],
-    exclusions: ["Airfare", "Monastery Entry Fees", "Personal Expenses"]
-  },
-  {
     id: 7,
     title: "Luxury Houseboat Stay",
-    image: "https://picsum.photos/seed/kashmir7/800/600",
+    image: "https://images.unsplash.com/photo-1614056965546-42fbe24eb36c?q=80&w=2129&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "2 Nights / 3 Days",
     location: "Dal Lake, Srinagar",
     price: "₹15,000",
@@ -262,7 +233,7 @@ export const PACKAGES = [
   {
     id: 8,
     title: "Sonamarg Meadow Trek",
-    image: "https://picsum.photos/seed/kashmir8/800/600",
+    image: "https://images.unsplash.com/photo-1675025814466-7de5bf562a5b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3 Nights / 4 Days",
     location: "Sonamarg - Thajiwas Glacier",
     price: "₹14,500",

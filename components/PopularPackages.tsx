@@ -10,7 +10,7 @@ export default function PopularPackages() {
   const displayPackages = PACKAGES.slice(0, 6);
 
   return (
-    <section className="py-20 bg-surface-container-lowest overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         
         {/* Header Section */}

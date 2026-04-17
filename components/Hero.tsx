@@ -8,11 +8,11 @@ import ContactForm from './ContactForm';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Static Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1680701529599-1a9c712fd9b9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1716099934086-d64a79d43297?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Kashmir Background"
           fill
           className="object-cover"
@@ -50,10 +50,10 @@ export default function Hero() {
             className="space-y-4"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white leading-[1.1] tracking-tight drop-shadow-2xl">
-              Top <span className="text-blue-300 italic">Kashmir</span> Tour Package<br />
-              Reserve Your <span className="text-blue-300">Perfect Trip</span><br />
+              Top <span className="text-blue-400 italic">Kashmir</span> Tour Package<br />
+              Reserve Your <span className="text-blue-400 italic">Perfect Trip</span><br />
               <span className="text-lg sm:text-xl md:text-2xl font-sans font-medium tracking-normal text-white/90">
-                4N/5D Starting <span className="text-blue-300">₹12,500</span> only
+                4N/5D Starting <span className="text-blue-400 italic">₹12,500</span> only
               </span>
             </h1>
 
