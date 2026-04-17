@@ -17,7 +17,7 @@ export default function ContactSection() {
             </span>
             <div className="h-px w-6 lg:w-10 bg-primary/30" />
           </div>
-          <h2 className="text-3xl lg:text-4xl font-serif text-on-surface tracking-tight">
+          <h2 className="text-3xl lg:text-6xl font-serif text-on-surface tracking-tight">
             Get In <span className="text-primary italic">Touch</span>
           </h2>
         </div>
