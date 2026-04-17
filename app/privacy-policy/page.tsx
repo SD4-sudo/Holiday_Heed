@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 export default function PrivacyPolicy() {
     return (
-        <main className="min-h-screen bg-surface">
+        <main className="min-h-screen bg-surface pt-15 ">
             <Navbar />
 
             <div className="pt-32 pb-20 px-4 md:px-8">
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-5xl lg:text-7xl font-headline font-black text-on-surface mb-6 tracking-tight"
+                            className="text-3xl lg:text-7xl font-headline font-black text-on-surface mb-6 tracking-tight"
                         >
                             Privacy <span className="text-primary italic">Policy</span>
                         </motion.h1>
