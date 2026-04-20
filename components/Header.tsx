@@ -11,10 +11,10 @@ import BookingDialog from './BookingDialog';
 const NAV_ITEMS = [
   { name: 'Home', href: '/#hero', id: 'hero' },
   { name: 'Packages', href: '/packages' },
-  { name: 'Destinations', href: '/#destinations', id: 'destinations' },
+  { name: 'Destinations', href: '/destinations' },
   // { name: 'Category', href: '/#category', id: 'category' },
   { name: 'Testimonials', href: '/#testimonials', id: 'testimonials' },
-  { name: 'Contact', href: '/#contact', id: 'contact' },
+  { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' },
 ];
 

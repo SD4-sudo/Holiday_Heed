@@ -1,14 +1,12 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import TrendingDestinations from '@/components/TrendingDestinations';
+
 import PopularPackages from '@/components/PopularPackages';
 import CategoryPackages from '@/components/CategoryPackages';
 import SeasonGuide from '@/components/SeasonGuide';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import TrendingEscapes from '@/components/TrendingEscapes';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
-import ContactSection from '@/components/ContactSection';
 import PopularPlaces from '@/components/PopularPlaces';
 import Footer from '@/components/Footer';
 import CallButton from '@/components/CallButton';
@@ -22,14 +20,12 @@ export default function Home() {
       <Header />
       <Hero />
       <PopularPackages />
-      <TrendingDestinations />
       {/* <CategoryPackages /> */}
       {/* <TrendingEscapes /> */}
       <SeasonGuide />
       <WhyChooseUs />
       <Testimonials />
       <FAQ />
-      <ContactSection />
       <Analytics />
       <SpeedInsights />
       <PopularPlaces />

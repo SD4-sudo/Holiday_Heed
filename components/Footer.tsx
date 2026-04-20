@@ -44,7 +44,7 @@ export default function Footer() {
                 { name: 'Home', href: '/' },
                 { name: 'About Us', href: '/about' },
                 { name: 'Packages', href: '/packages' },
-                { name: 'Contact Us', href: '#contact' }
+                { name: 'Contact Us', href: '/contact' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm font-bold text-on-surface-variant/70 hover:text-primary transition-all flex items-center gap-2 group">

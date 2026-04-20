@@ -151,7 +151,7 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed inset-0 z-[90] flex items-center justify-center p-2 sm:p-3 my-4"
+            className="fixed inset-0 z-[90] flex items-center justify-center p-2 sm:p-3 my-8 sm:my-12"
           >
             <div className="bg-white rounded-2xl shadow-2xl w-full max-w-xs sm:max-w-sm p-3 sm:p-5 relative">
               <button
@@ -161,8 +161,7 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex flex-col items-center gap-1 sm:gap-2 mb-4 sm:mb-6 justify-center">
-                <span className="text-base sm:text-xl font-black text-on-surface">Hi 👋</span>
+              <div className="flex flex-col items-center gap-1 sm:gap-2 mb-4 sm:mb-6 justify-center pt-6 sm:pt-8">
                 <span className="text-xs sm:text-lg font-black text-on-surface text-center">Enquire Now To Get Best Price.</span>
               </div>
 
