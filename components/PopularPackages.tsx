@@ -23,10 +23,10 @@ export default function PopularPackages() {
             <div className="h-px w-8 lg:w-12 bg-primary/30" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-serif text-on-surface tracking-tight">
-            Popular <span className="text-primary italic">Kashmir Packages</span>
+            Popular <span className="text-primary italic">Kashmir Tour Packages</span>
           </h2>
           <p className="mt-4 text-on-surface-variant text-sm font-medium max-w-lg">
-           Enjoy the beauty of the valley with our carefully selected travel packages, now at up to 30% off.
+           Experience the beauty of Kashmir with our carefully selected Kashmir tour packages, now at up to 30% off. Book your Kashmir tour package today!
           </p>
         </div>
 

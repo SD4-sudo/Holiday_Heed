@@ -27,10 +27,10 @@ export default function PopularPlaces() {
             <div className="h-px w-8 lg:w-12 bg-primary/30" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-serif text-on-surface tracking-tight">
-            Popular <span className="text-primary italic">Places</span>
+            Popular <span className="text-primary italic">Kashmir Destinations</span>
           </h2>
           <p className="mt-4 text-on-surface-variant text-sm font-medium max-w-lg">
-            Discover the most sought-after destinations in the valley and start planning your custom itinerary today.
+            Discover the most sought-after Kashmir destinations and build your perfect Kashmir tour package with our experts today.
           </p>
         </div>
 

@@ -49,10 +49,10 @@ export default function WhyChooseUs() {
             <div className="h-px w-8 lg:w-12 bg-primary/30" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-serif text-on-surface tracking-tight">
-            Why <span className="text-primary italic">Pick Us?</span>
+            Why <span className="text-primary italic">Choose Us for Kashmir Tour Packages?</span>
           </h2>
           <p className="mt-4 text-on-surface-variant text-sm font-medium max-w-lg">
-            Our Experts Go An Extra Mile to Make Your Tour Package Truly Unforgettable.
+            Our experts go an extra mile to make your Kashmir tour package truly unforgettable with authentic experiences and personalized service.
           </p>
         </div>
 
