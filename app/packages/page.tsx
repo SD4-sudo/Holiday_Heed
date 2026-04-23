@@ -51,7 +51,7 @@ function PackagesContent() {
               <ChevronRight className="w-3.5 h-3.5 text-on-surface-variant/20 shrink-0" />
               {fromDestinations && selectedDestination !== 'All' ? (
                 <>
-                  <Link href="/#destinations" className="text-on-surface-variant/50 hover:text-primary transition-colors text-xs font-bold tracking-wide">
+                  <Link href="/destinations" className="text-on-surface-variant/50 hover:text-primary transition-colors text-xs font-bold tracking-wide">
                     Destinations
                   </Link>
                   <ChevronRight className="w-3.5 h-3.5 text-on-surface-variant/20 shrink-0" />

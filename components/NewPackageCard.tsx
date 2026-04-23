@@ -89,10 +89,7 @@ export default function NewPackageCard({ pkg, variant = 'grid', onBook, index }:
       <div className="p-4 flex flex-col gap-3 flex-grow">
         
         {/* Title Badge */}
-        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/20 to-primary/5 pr-4 pl-1.5 py-1.5 rounded-r-full mr-auto -ml-4">
-          <div className="bg-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-black shadow-md shrink-0">
-            {(index ?? 0) + 1}
-          </div>
+        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/20 to-primary/5 pr-4 pl-4 py-1.5 rounded-r-full mr-auto -ml-4">
           <h3 className="font-bold text-gray-900 text-[15px] leading-tight line-clamp-1">{pkg.title}</h3>
         </div>
 

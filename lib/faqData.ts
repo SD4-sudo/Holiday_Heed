@@ -1,11 +1,11 @@
 export const FAQ_DATA = [
   {
-    question: "What's included in Holiday Heed Kashmir's Kashmir tour packages?",
-    answer: "Most packages include accommodation, sightseeing as per itinerary, local transfers, and on-tour support. Inclusions can vary by package (budget/premium), so our team confirms the exact inclusions before you book."
+    question: "What's included in our Kashmir tour packages?",
+    answer: "Our Kashmir tour packages typically include accommodation, sightseeing as per itinerary, local transfers, and 24/7 on-tour support. Each Kashmir tour package varies by category (budget/premium), so we confirm exact inclusions before you book."
   },
   {
-    question: "Can I customize my Kashmir itinerary (Gulmarg, Pahalgam, Sonamarg, etc.)?",
-    answer: "Yes. You can customize the number of days, hotel category, places to cover, and add-ons like houseboat stay, Shikara ride, or day trips. Share your travel dates and preferences and we’ll tailor the plan."
+    question: "Can I customize my Kashmir tour package itinerary (Gulmarg, Pahalgam, Sonamarg)?",
+    answer: "Absolutely! Our Kashmir tour packages are fully customizable. You can adjust duration, hotel category, destinations, and add-ons like houseboat stays or glacier treks. Share your preferences and we'll tailor the perfect Kashmir tour package for you."
   },
   {
     question: "What is the best time to visit Kashmir?",
