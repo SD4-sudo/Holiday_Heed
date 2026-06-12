@@ -117,6 +117,12 @@ export default function Footer() {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      onClick={item.href.startsWith('tel:') ? (e) => {
+                        if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                          e.preventDefault();
+                          (window as any).gtag_report_conversion(item.href);
+                        }
+                      } : undefined}
                       className="text-sm font-bold text-on-surface-variant leading-relaxed hover:text-primary transition-colors cursor-pointer block"
                     >
                       {item.value}

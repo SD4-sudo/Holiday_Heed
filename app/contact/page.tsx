@@ -70,7 +70,13 @@ export default function ContactPage() {
 
                   <div 
                     className="flex items-start gap-4 group cursor-pointer" 
-                    onClick={() => window.location.href = 'tel:+917006787978'}
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                        (window as any).gtag_report_conversion('tel:+917006787978');
+                      } else {
+                        window.location.href = 'tel:+917006787978';
+                      }
+                    }}
                   >
                     <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md shrink-0 group-hover:bg-white/20 transition-colors shadow-inner">
                       <Phone className="w-5 h-5 text-white" />

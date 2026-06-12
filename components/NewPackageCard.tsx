@@ -169,7 +169,11 @@ export default function NewPackageCard({ pkg, variant = 'grid', onBook, index }:
             onClick={(e) => { 
               e.preventDefault(); 
               e.stopPropagation(); 
-              window.location.href = 'tel:+917006787978';
+              if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                (window as any).gtag_report_conversion('tel:+917006787978');
+              } else {
+                window.location.href = 'tel:+917006787978';
+              }
             }}
             className="bg-[#f59e0b] hover:bg-[#d97706] text-white py-2 rounded-lg text-[10px] font-black tracking-wide transition-colors flex items-center justify-center gap-1 shadow-sm active:scale-95 cursor-pointer"
           >

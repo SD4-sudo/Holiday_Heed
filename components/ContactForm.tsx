@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface ContactFormProps {
   compact?: boolean;
 }
 
 export default function ContactForm({ compact = false }: ContactFormProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: '',
     mobile: '',
@@ -100,7 +102,6 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitted(true);
         setFormData({
           fullName: '',
           mobile: '',
@@ -108,7 +109,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
           travelers: '',
           message: ''
         });
-        setTimeout(() => setSubmitted(false), 3000);
+        router.push('/thank-you');
       } else {
         setGlobalError(data.message || 'Failed to send email. Please try again.');
       }

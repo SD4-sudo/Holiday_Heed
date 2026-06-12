@@ -10,12 +10,13 @@ import BookingDialog from './BookingDialog';
 
 const NAV_ITEMS = [
   { name: 'Home', href: '/#hero', id: 'hero' },
+  { name: 'About', href: '/about' },
   { name: 'Packages', href: '/packages' },
   { name: 'Destinations', href: '/destinations' },
   // { name: 'Category', href: '/#category', id: 'category' },
   { name: 'Testimonials', href: '/#testimonials', id: 'testimonials' },
   { name: 'Contact', href: '/contact' },
-  { name: 'About', href: '/about' },
+
 ];
 
 export default function Header() {
@@ -94,9 +95,8 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative font-medium text-sm tracking-tight transition-all duration-300 py-1 ${
-                    active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
-                  }`}
+                  className={`relative font-medium text-sm tracking-tight transition-all duration-300 py-1 ${active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                    }`}
                 >
                   {item.name}
                   {active && (
@@ -112,8 +112,8 @@ export default function Header() {
           </div>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            <button 
-              onClick={() => setIsBookingOpen(true)} 
+            <button
+              onClick={() => setIsBookingOpen(true)}
               className="hidden md:block px-4 md:px-6 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm tracking-tight transition-all duration-300 shadow-md active:scale-95 whitespace-nowrap cursor-pointer bg-primary text-white hover:bg-primary/90"
             >
               Book Now
@@ -157,9 +157,8 @@ export default function Header() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-sm font-semibold tracking-tight transition-colors ${
-                        active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
-                      }`}
+                      className={`text-sm font-semibold tracking-tight transition-colors ${active ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                        }`}
                     >
                       {item.name}
                     </Link>

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 
@@ -17,6 +18,7 @@ interface BookingDialogProps {
 }
 
 export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: '',
     mobile: '',
@@ -110,7 +112,6 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
       const data = await response.json();
 
       if (response.ok) {
-        setSubmitted(true);
         setFormData({
           fullName: '',
           mobile: '',
@@ -118,10 +119,8 @@ export default function BookingDialog({ isOpen, onClose }: BookingDialogProps) {
           travelers: '',
           message: ''
         });
-        setTimeout(() => {
-          setSubmitted(false);
-          onClose();
-        }, 2000);
+        onClose();
+        router.push('/thank-you');
       } else {
         setGlobalError(data.message || 'Failed to send email. Please try again.');
       }
